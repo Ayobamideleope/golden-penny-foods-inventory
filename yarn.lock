@@ -9480,6 +9480,11 @@ vue-cli-plugin-electron-builder@^1.4.4:
     webpack-chain "^5.0.0"
     yargs "^14.0.0"
 
+vue-cli-plugin-moment@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue-cli-plugin-moment/-/vue-cli-plugin-moment-0.1.1.tgz#457a0cafc9cd5aa0b8d9017cbd43dd9ddf1452ae"
+  integrity sha512-4IaEjKKSMP2AbizTO735vaZ2H3nTgdcOoFAHpKnW1VHjGu+n1iAI4WwZsKmQCbemMpmG0ehEqEdciYAtezZ0NA==
+
 vue-cli-plugin-vuetify@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify/-/vue-cli-plugin-vuetify-2.0.3.tgz#a4bd1e7b92abadbd9cb64629fef8b139c9d3337b"
