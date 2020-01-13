@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
+import { preset } from 'vue-cli-plugin-vuetify-preset-reply';
 
 Vue.use(Vuetify);
 
-export default new Vuetify({
+const options = {
   theme: {
     options: {
       customProperties: true
@@ -12,4 +13,10 @@ export default new Vuetify({
       light: {}
     }
   }
+};
+
+export default new Vuetify({
+  preset,
+
+  ...options
 });
