@@ -4,9 +4,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
+import 'typeface-work-sans';
 import vuetify from './plugins/vuetify';
-import 'roboto-fontface/css/roboto/roboto-fontface.css';
-import '@mdi/font/css/materialdesignicons.css';
+import './styles/main.scss';
 
 Vue.config.productionTip = false;
 

@@ -1,6 +1,6 @@
 <template>
   <div class="vi-home-page display-1">
-    Home
+    Dashboard
   </div>
 </template>
 

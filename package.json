@@ -1,5 +1,5 @@
 {
-  "name": "vision-inventory",
+  "name": "golden-penny-foods-inventory",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,12 +13,12 @@
     "postuninstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "@mdi/font": "^3.6.95",
-    "@mdi/svg": "^4.7.95",
+    "@mdi/js": "^4.7.95",
     "core-js": "^3.4.4",
     "firebase": "^7.6.2",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
+    "typeface-work-sans": "^0.0.72",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
