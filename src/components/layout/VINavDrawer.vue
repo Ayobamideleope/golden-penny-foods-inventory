@@ -64,12 +64,15 @@
       <v-spacer />
 
       <div class="flex-grow-0 px-2">
-        <img
-          src="@/assets/svg/avatar-man.svg"
-          alt="Site Logo"
-          style="width: 36px; height: 36px;"
-          class="d-inline-block"
-        />
+        <v-layout align-center>
+          <img
+            src="@/assets/svg/avatar-man.svg"
+            alt="Site Logo"
+            style="width: 36px; height: 36px;"
+            class="d-inline-block"
+          />
+          <span class="ml-4 text--secondary">Admin Name</span>
+        </v-layout>
 
         <v-layout align-center>
           <v-btn text color="white" class="mr-4" icon @click="toggleDrawer">
@@ -181,7 +184,7 @@ export default class VINavDrawer extends Vue {
     // console.log('[toggle-drawer]');
     // console.log(bool);
     if (this.$vuetify.breakpoint.smAndUp) {
-      console.info('app drawer is being toggled by desktop');
+      // console.info('app drawer is being toggled by desktop');
 
       if (this.isShown && this.isMiniVariant) {
         this.$store.commit('ui/TOGGLE_APP_DRAWER_MINI_VARIANT', false);
@@ -200,10 +203,10 @@ export default class VINavDrawer extends Vue {
       //   this.$store.dispatch('ui/setAppDrawerToMiniPersistent');
       // });
     } else {
-      console.info('app drawer is being toggled by mobile');
+      // console.info('app drawer is being toggled by mobile');
 
       if (this.isShown) {
-        this.$store.commit('ui/TOGGLE_APP_DRAWER', false);
+        this.$store.commit('ui/sTOGGLE_APP_DRAWER', false);
       } else {
         this.$store.commit(
           'ui/SET_APP_DRAWER',

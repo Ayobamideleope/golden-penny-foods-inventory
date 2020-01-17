@@ -28,7 +28,9 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: path.join(__static, '/img/logo.png')
+    // @ts-ignore
+    // icon: path.join(__static, '/img/logo.png')
+    icon: path.join(__static, 'icon.png')
   });
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {

@@ -107,7 +107,7 @@ export default class VIAppBar extends Vue {
     // console.log('[toggle-drawer]');
     // console.log(bool);
     if (this.$vuetify.breakpoint.smAndUp) {
-      console.info('app drawer is being toggled by desktop');
+      // console.info('app drawer is being toggled by desktop');
 
       if (this.isShown && this.isMiniVariant) {
         this.$store.commit('ui/TOGGLE_APP_DRAWER_MINI_VARIANT', false);
@@ -126,7 +126,7 @@ export default class VIAppBar extends Vue {
       //   this.$store.dispatch('ui/setAppDrawerToMiniPersistent');
       // });
     } else {
-      console.info('app drawer is being toggled by mobile');
+      // console.info('app drawer is being toggled by mobile');
 
       if (this.isShown) {
         this.$store.commit('ui/TOGGLE_APP_DRAWER', false);
