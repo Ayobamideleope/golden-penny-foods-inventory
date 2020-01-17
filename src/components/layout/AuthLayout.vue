@@ -2,14 +2,14 @@
   <section class="vi-auth-layout vh-100 position-relative">
     <v-container class="py-12 fill-height">
       <img
-        src="./../../assets/img/logo-and-banner.png"
+        src="@/assets/img/logo-and-banner.png"
         alt="Golden Penny Logo and Banner"
         class="vi-auth-layout__logo-and-banner"
       />
-      <v-layout class="fill-height align-center justify-sm-end">
+      <v-layout class="fill-height align-center justify-center justify-sm-end">
         <v-flex
           xs10
-          class="white max-width-400 pa-2 pa-sm-10 elevation-10 rounded-2 expand-transition transition-swing"
+          class="white max-width-400 px-4 pb-6 pt-5 pa-sm-10 elevation-10 rounded-2 expand-transition transition-swing"
         >
           <slot />
         </v-flex>
@@ -43,9 +43,14 @@ export default class AuthLayout extends Vue {
   &__logo-and-banner {
     position: absolute;
     top: 0;
-    left: 64px;
-    width: 128px;
+    left: 32px;
+    width: 64px;
     height: auto;
+
+    @media #{map-get($display-breakpoints, 'sm-and-up')} {
+      left: 64px;
+      width: 128px;
+    }
   }
 }
 </style>

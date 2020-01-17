@@ -47,7 +47,7 @@
           Forgot your password?
         </a>
 
-        <div class="d-flex justify-center mt-">
+        <div class="d-flex justify-center">
           <v-btn
             :loading="formIsProcessing"
             large
@@ -94,7 +94,8 @@ export default class SignInPage extends Vue {
       value => this.isFieldLengthy(value, 100, 'Email'),
       value => /.+@.+/.test(value) || 'Type a valid email address'
     ],
-    password: [
+    password: [value => this.isFieldEmpty(value, 'Password')],
+    /* password: [
       value => this.isFieldEmpty(value, 'Password'),
       value => /(.*[a-z])/.test(value) || 'Must contain at least a lower case',
       value => /(.*[A-Z])/.test(value) || 'Must contain at least a upper case',
@@ -104,7 +105,7 @@ export default class SignInPage extends Vue {
       //   "Must contain at least a special character like -_+!@#$%^&*",
       value => value.length >= 6 || `Password must be at least 6 characters`,
       value => this.isFieldLengthy(value, 16, 'Password')
-    ],
+    ], */
     confirmPassword: [
       value => value === this.form.password || 'Passwords do not match'
     ]
@@ -146,7 +147,7 @@ export default class SignInPage extends Vue {
     if (!this.formIsValid || this.formIsProcessing) return;
 
     // eslint-disable-next-line no-console
-    console.log('Sign up called');
+    // console.log('Sign up called');
 
     this.formIsProcessing = true;
     this.errorResponse = '';

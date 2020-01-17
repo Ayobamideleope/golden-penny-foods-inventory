@@ -1,4 +1,14 @@
 // @import './variables';
+html {
+  font-family: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
+}
+.v-application {
+  font-family: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
+
+  .body-1, .body-2, .caption, .subtitle, .headline, .title, .display-1, .display-2, .display-3 {
+    font-family: 'Work Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !important;
+  }
+}
 
 body {
   scrollbar-face-color: var(--v-primary-darken2);

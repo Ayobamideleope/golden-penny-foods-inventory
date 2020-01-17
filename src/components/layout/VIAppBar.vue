@@ -1,96 +1,24 @@
 <template>
-  <v-navigation-drawer
+  <v-layout
     v-if="isEnabled"
-    v-model="isShown"
-    :mini-variant.sync="isMiniVariant"
-    :temporary="isTemporary"
-    fixed
-    bottom
-    floating
-    app
-    class="vi-nav-drawer quaternary pb-6 px-4 elevation-10 dark"
-    :width="296"
-    :mobile-break-point="600"
+    class="v-i-app-bar px-3 transition-swing quaternary"
+    align-center
+    justify-space-between
   >
-    <v-layout column fill-height justify-start>
-      <div>
-        <v-layout class="px-2 pb-8" align-center>
-          <img
-            src="@/assets/img/logo-and-banner.png"
-            alt="Site Logo"
-            :style="{ width: isMiniVariant ? '40px' : '48px', height: 'auto' }"
-            class="mr-2 transition-swing"
-          />
+    <v-btn text color="white" class="mr-4" icon @click="toggleDrawer">
+      <v-icon>{{ mdiChevronUp }}</v-icon>
+    </v-btn>
 
-          <h1 class="ml-4 title dark-text--secondary">
-            Golden Penny
-          </h1>
-        </v-layout>
+    <v-btn large rounded elevation="10" class="secondary mb-4" icon>
+      <v-icon color="quaternary" large>
+        {{ mdiPlus }}
+      </v-icon>
+    </v-btn>
 
-        <v-list color="transparent" dark>
-          <v-btn
-            large
-            rounded
-            elevation="10"
-            class="secondary mb-4"
-            :icon="isMiniVariant"
-          >
-            <v-icon color="quaternary" :left="!isMiniVariant" large>
-              {{ mdiPlus }}
-            </v-icon>
-            <span v-show="!isMiniVariant" class="ml-3">Add</span>
-          </v-btn>
-
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            class="vi-nav-drawer__nav-link rounded-2 overflow-hidden"
-            link
-            :to="item.link"
-            exact
-            exact-active-class="vi-nav-drawer__nav-link--active secondary--text"
-          >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </div>
-
-      <v-spacer />
-
-      <div class="flex-grow-0 px-2">
-        <img
-          src="@/assets/svg/avatar-man.svg"
-          alt="Site Logo"
-          style="width: 36px; height: 36px;"
-          class="d-inline-block"
-        />
-
-        <v-layout align-center>
-          <v-btn text color="white" class="mr-4" icon @click="toggleDrawer">
-            <v-icon>{{
-              isMiniVariant ? mdiChevronRight : mdiChevronLeft
-            }}</v-icon>
-          </v-btn>
-
-          <v-btn text color="white" icon>
-            <v-icon>{{ mdiMagnify }}</v-icon>
-          </v-btn>
-
-          <v-spacer />
-
-          <v-btn text dark icon>
-            <v-icon>{{ mdiSettings }}</v-icon>
-          </v-btn>
-        </v-layout>
-      </div>
-    </v-layout>
-  </v-navigation-drawer>
+    <v-btn text color="white" icon>
+      <v-icon>{{ mdiMagnify }}</v-icon>
+    </v-btn>
+  </v-layout>
 </template>
 
 <script lang="ts">
@@ -98,8 +26,7 @@ import { Vue, Component } from 'vue-property-decorator';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 
 import {
-  mdiChevronLeft,
-  mdiChevronRight,
+  mdiChevronUp,
   mdiMagnify,
   mdiSettings,
   mdiViewDashboard,
@@ -130,7 +57,7 @@ import {
     })
   }
 })
-export default class VINavDrawer extends Vue {
+export default class VIAppBar extends Vue {
   [x: string]: any;
 
   items = [
@@ -140,8 +67,7 @@ export default class VINavDrawer extends Vue {
   ];
 
   // Icons
-  mdiChevronLeft = mdiChevronLeft;
-  mdiChevronRight = mdiChevronRight;
+  mdiChevronUp = mdiChevronUp;
   mdiMagnify = mdiMagnify;
   mdiSettings = mdiSettings;
   mdiViewDashboard = mdiViewDashboard;
@@ -217,17 +143,19 @@ export default class VINavDrawer extends Vue {
 </script>
 
 <style lang="scss" scoped>
-// $border-radius-root: 4px;
-
-.vi-nav-drawer {
+.v-i-app-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
   border-top-right-radius: $border-radius-root * 4;
+  border-top-left-radius: $border-radius-root * 4;
 
-  &__nav-link {
-    &--active {
-      &::before {
-        background: transparent;
-      }
-    }
+  @media #{map-get($display-breakpoints, 'sm-and-up')} {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(200%);
   }
 }
 </style>

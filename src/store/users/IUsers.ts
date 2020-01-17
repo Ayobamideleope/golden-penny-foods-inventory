@@ -1,5 +1,3 @@
-type users= User[]
+type users = User[];
 
-interface User {
-
-}
+interface User {}

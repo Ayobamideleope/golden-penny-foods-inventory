@@ -1,22 +1,22 @@
 export default {
   // APP_DRAWER
   TOGGLE_APP_DRAWER(state, bool) {
-    state.appDrawer.isShown = bool;
+    state.appDrawer = { ...state.appDrawer, isShown: bool };
   },
   TOGGLE_APP_DRAWER_ENABLED(state, bool) {
-    state.appDrawer.isEnabled = bool;
+    state.appDrawer = { ...state.appDrawer, isEnabled: bool };
   },
   TOGGLE_APP_DRAWER_MINI_VARIANT(state, bool) {
-    state.appDrawer.isMiniVariant = bool;
+    state.appDrawer = { ...state.appDrawer, isMiniVariant: bool };
   },
   TOGGLE_APP_DRAWER_MINI_VARIANT_ENABLED(state, bool) {
-    state.appDrawer.isMiniVariantEnabled = bool;
+    state.appDrawer = { ...state.appDrawer, isMiniVariantEnabled: bool };
   },
-  TOGGLE_APP_DRAWER_PERSISTENT(state, bool) {
-    state.persistentAppDrawer = bool;
+  TOGGLE_APP_DRAWER_PERMANENT(state, bool) {
+    state = { ...state.appDrawer, PermanentAppDrawer: bool };
   },
   TOGGLE_APP_DRAWER_TEMPORARY(state, bool) {
-    state.temporaryAppDrawer = bool;
+    state = { ...state.appDrawer, temporaryAppDrawer: bool };
   },
   SET_APP_DRAWER(
     state,
@@ -24,7 +24,7 @@ export default {
       isEnabled = true,
       isTemporary = true,
       isFloating = true,
-      isPersistent = false,
+      isPermanent = false,
       isMiniVariantEnabled = false,
       isMiniVariant = false,
       isShown = false
@@ -35,24 +35,24 @@ export default {
     state.appDrawer.isEnabled = isEnabled;
     state.appDrawer.isTemporary = isTemporary;
     state.appDrawer.isFloating = isFloating;
-    state.appDrawer.isPersistent = isPersistent;
+    state.appDrawer.isPermanent = isPermanent;
     state.appDrawer.isMiniVariantEnabled = isMiniVariantEnabled;
     state.appDrawer.isMiniVariant = isMiniVariant;
     state.appDrawer.isShown = isShown;
   },
 
   SET_APP_DRAWER_DISABLED(state) {
-    state.appDrawer = state.appDrawerDisabled;
+    state.appDrawer = { ...state.appDrawer, ...state.appDrawerDisabled };
   },
 
   SET_APP_DRAWER_MINI_VARIANT(state) {
-    state.appDrawer = state.appDrawerMiniPersistent;
+    state.appDrawer = { ...state.appDrawer, ...state.appDrawerMiniPermanent };
   },
 
   // SNACKBAR
   TOGGLE_SNACKBAR(state, payload) {
-    console.log('[ui/TOGGLE_SNACKBAR]');
-    console.dir(payload);
+    // console.log('[ui/TOGGLE_SNACKBAR]');
+    // console.dir(payload);
     state.snackbar.show = payload;
   },
   SET_SNACKBAR(

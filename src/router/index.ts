@@ -29,6 +29,26 @@ const routes = [
   },
 
   {
+    path: '/stocks',
+    name: 'stocks',
+    // route level code-splitting
+    // this generates a separate chunk (sign-in.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "sign-in" */ '../views/Stocks.vue')
+  },
+
+  {
+    path: '/Sales',
+    name: 'sales',
+    // route level code-splitting
+    // this generates a separate chunk (sign-in.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "sign-in" */ '../views/Sales.vue')
+  },
+
+  {
     path: '/sign-in',
     name: 'sign-in',
     // route level code-splitting

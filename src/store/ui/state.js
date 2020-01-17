@@ -1,16 +1,17 @@
 export default () => ({
   appDrawer: {
     isEnabled: true,
-    isTemporary: true,
+    isTemporary: false,
     isMiniVariantEnabled: false,
     isMiniVariant: false,
+    isPermanent: true,
     isShown: null
   },
 
   appDrawerDisabled: {
     isEnabled: false,
     isTemporary: true,
-    isPersistent: true,
+    isPermanent: true,
     isShown: null
   },
 
@@ -19,14 +20,21 @@ export default () => ({
     isTemporary: false,
     isMiniVariantEnabled: true,
     isMiniVariant: true,
-    isPersistent: true,
+    isPermanent: true,
     isShown: true
   },
 
   appDrawerFullPersistent: {
     // isEnabled: true, Mutation sets it by default
     isTemporary: false,
-    isPersistent: true,
+    isPermanent: true,
+    isShown: true
+  },
+
+  appDrawerFullTemporary: {
+    // isEnabled: true, Mutation sets it by default
+    isTemporary: true,
+    isPermanent: false,
     isShown: true
   },
 

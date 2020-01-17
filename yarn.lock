@@ -1523,11 +1523,6 @@
   resolved "https://registry.yarnpkg.com/@vue/web-component-wrapper/-/web-component-wrapper-1.2.0.tgz#bb0e46f1585a7e289b4ee6067dcc5a6ae62f1dd1"
   integrity sha512-Xn/+vdm9CjuC9p3Ae+lTClNutrVhsXpzxvoTXXtoys6kVRX9FkueSUAqSWAyZntmVLlR4DosBV4pH8y5Z/HbUw==
 
-"@vuetify/cli-plugin-utils@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@vuetify/cli-plugin-utils/-/cli-plugin-utils-0.0.4.tgz#1c5cc2459b890373acdab65b861e2e754516b08f"
-  integrity sha512-iCrAy6NT3Xp76YSuW8Q0pgb3LD7wocrZQr9kTIdQZjgysie1kkRjV3gCCrkcXALibidLmclj/7SfoFE3h27hlw==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -6913,7 +6908,7 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
-node-pre-gyp@*, node-pre-gyp@^0.14.0:
+node-pre-gyp@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.14.0.tgz#9a0596533b877289bcad4e143982ca3d904ddc83"
   integrity sha512-+CvDC7ZttU/sSt9rFjix/P05iS43qHCOOGzcr3Ry99bXG7VX953+vFyEuph/tfqoYu8dttBkE86JSKBO2OzcxA==
@@ -10158,13 +10153,6 @@ vue-cli-plugin-moment@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-moment/-/vue-cli-plugin-moment-0.1.1.tgz#457a0cafc9cd5aa0b8d9017cbd43dd9ddf1452ae"
   integrity sha512-4IaEjKKSMP2AbizTO735vaZ2H3nTgdcOoFAHpKnW1VHjGu+n1iAI4WwZsKmQCbemMpmG0ehEqEdciYAtezZ0NA==
-
-vue-cli-plugin-vuetify-preset-reply@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify-preset-reply/-/vue-cli-plugin-vuetify-preset-reply-1.0.1.tgz#56a8b0822bcc17974d19e53e692cbfb4e3d82171"
-  integrity sha512-wl3i3KCYlN9sJ0bLns9pcz7PZMuomuZ1ouU8ngOPz1fFWzyJKkY25FBUIGbULt9WE88Trc5X4n7n5tQXwx4cyg==
-  dependencies:
-    "@vuetify/cli-plugin-utils" "^0.0.4"
 
 vue-cli-plugin-vuetify@^2.0.3:
   version "2.0.3"

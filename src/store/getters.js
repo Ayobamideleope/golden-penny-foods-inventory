@@ -1,5 +1,5 @@
 export default {
   firebaseAuthIsReady(state) {
-    return state.firebaseAuthIsReady
+    return state.firebaseAuthIsReady;
   }
-}
+};
